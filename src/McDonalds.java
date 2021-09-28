@@ -66,7 +66,7 @@ public class McDonalds
         {
             notifyAll(); //Alle die in der getNuggets() warten dürfen weiter machen
 
-            System.out.println("\nWarteschlange abgebaut(" + nuggets +") (☞ﾟヮﾟ)☞ [NOTIFY]");
+            System.out.println("\nWarteschlange abgebaut(" + nuggets +") (☞ﾟヮﾟ)☞ [NOTIFY]\n");
             getStaffStatus();
         }
        
