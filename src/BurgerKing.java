@@ -35,8 +35,8 @@ public class BurgerKing
             
             System.out.println("\nWarte auf Nachschub [WAIT]\n");
 
-            
-            wait();
+            //Wait() bewirtk das ein Thread an dieser Stekle stehen bleibt, die Methode jedoch nicht sperrt/lockt
+            wait(); //Lässt die aktuellen Zugreifer (zb Kasse 1 oder 2) warten bis Notify() Eintritt
 
         }
         
@@ -56,7 +56,8 @@ public class BurgerKing
 
         if(nuggets >= queue && c1.getState().equals(Thread.State.WAITING) )
         {
-            notifyAll();
+            notifyAll(); //Alle die in der getNuggets() warten dürfen weiter machen
+            
             System.out.println("\nWarteschlange abgebaut(" + nuggets +") [NOTIFY]");
             System.out.println("Status Kasse1 : "+c1.getState()+" | Status Kasse2 : "+c2.getState()+"\n");
         }
