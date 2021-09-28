@@ -49,7 +49,7 @@ public class BurgerKing
         
         nuggets -= queue;
         queue = 0;
-        System.out.println(" \n-- Bestellung fertig, Rest:("+nuggets+") --");
+        System.out.println(" \n-- Bestellung fertig, Vorrat:("+nuggets+") --");
         getStaffStatus();
     }
 
@@ -57,7 +57,7 @@ public class BurgerKing
     { 
         nuggets += val;
         
-        System.out.println("Nuggets fertig ! (" + nuggets +"/"+queue+") von "+name);
+        System.out.println("Neue Nuggets fertig ! (" + nuggets +"/"+queue+") von "+name);
 
         
 
