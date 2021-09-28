@@ -22,15 +22,9 @@ public class Cash implements Runnable
             try 
             {
                 Thread.sleep(r.nextInt(6)*1000);
-
                 new Kunde(this);
-
             } 
-            catch (InterruptedException e) 
-            {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+            catch (InterruptedException e){e.printStackTrace();}
             
         }
         

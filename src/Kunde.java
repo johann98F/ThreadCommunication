@@ -1,6 +1,7 @@
 import java.util.Random;
 
-public class Kunde {
+public class Kunde 
+{
     Cash c;
 
     Kunde(Cash c)
@@ -8,12 +9,10 @@ public class Kunde {
 
         Random r = new Random();
 
-        try {
-            
+        try 
+        {
             c.getOrder(r.nextInt(6) + 1);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        } 
+        catch (InterruptedException e) {e.printStackTrace();}
     }
 }
