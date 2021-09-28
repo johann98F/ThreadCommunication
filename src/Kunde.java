@@ -2,9 +2,9 @@ import java.util.Random;
 
 public class Kunde 
 {
-    Cash c;
+    CashRegister c;
 
-    Kunde(Cash c)
+    Kunde(CashRegister c)
     {
 
         Random r = new Random();

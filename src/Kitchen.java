@@ -1,14 +1,13 @@
 public class Kitchen implements Runnable
 {
-    BurgerKing bk;
-
+    McDonalds mc;
     String name;
-
     int speed;
+    private boolean running = true;
 
-    public Kitchen(BurgerKing bk, String name,int speed)
+    public Kitchen(McDonalds bk, String name,int speed)
     {
-        this.bk = bk;
+        this.mc = bk;
         this.name = name;
         this.speed = speed;
     }
@@ -16,8 +15,13 @@ public class Kitchen implements Runnable
     @Override
     public void run() 
     {
-        while(true)
+        while(running)
         {
+            if(name.contains("Eismaschine"))
+            {
+                kill();
+            }
+
             try 
             {
                 Thread.sleep(speed*1000);
@@ -28,10 +32,16 @@ public class Kitchen implements Runnable
             }
 
             
-            bk.essenFertig(1,name);
+            mc.essenFertig(1,name);
             
         }
         
+    }
+
+    public void kill()
+    {
+        System.err.println("\n"+name + " funktionert nicht mehr !\n");
+        running = false;
     }
     
 }
