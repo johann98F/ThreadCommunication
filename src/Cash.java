@@ -36,7 +36,7 @@ public class Cash implements Runnable
         
     }
 
-    public synchronized void bestellung(int val) throws InterruptedException
+    public synchronized void getOrder(int val) throws InterruptedException
     {
         counter++;
         System.out.println("\n++ ["+counter+"] Bestellung : " + val + "x von " + name+ " ++\n");

@@ -10,7 +10,7 @@ public class Kunde {
 
         try {
             
-            c.bestellung(r.nextInt(6) + 1);
+            c.getOrder(r.nextInt(6) + 1);
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
