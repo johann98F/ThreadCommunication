@@ -22,6 +22,7 @@ public class McDonalds
         getStaffStatus();
         
         System.out.println("+++ Niederer Pöbel beginnt zu Arbeiten ! +++\n");
+        
         k1.start();
         k2.start();
         c1.start();
@@ -50,7 +51,7 @@ public class McDonalds
         
         nuggets -= queue;
         queue = 0;
-        System.out.println(" \n-- Bestellung ["+cr.getName()+"]["+cr.getCounter()+"] fertig (ง^ ᗜ ^)ง  Vorrat:("+nuggets+")  --\n");
+        System.out.println(" \n-- Bestellung ["+cr.getName()+"]["+cr.getCounter()+"] fertig | Vorrat:("+nuggets+")  --\n");
         getStaffStatus();
     }
 
@@ -58,7 +59,7 @@ public class McDonalds
     { 
         nuggets += val;
         
-        System.out.println("Neue Nuggets fertig ! (" + nuggets +"/"+queue+") von "+name+ "  (ﾉ◕ ヮ◕)ﾉ*:・ﾟ✧");
+        System.out.println("Neue Nuggets fertig ! (" + nuggets +"/"+queue+") von "+name);
 
         
 
@@ -66,7 +67,7 @@ public class McDonalds
         {
             notifyAll(); //Alle die in der getNuggets() warten dürfen weiter machen
 
-            System.out.println("\nWarteschlange abgebaut(" + nuggets +") (☞ﾟヮﾟ)☞ [NOTIFY]\n");
+            System.out.println("\nWarteschlange abgebaut(" + nuggets +") [NOTIFY]\n");
             getStaffStatus();
         }
        

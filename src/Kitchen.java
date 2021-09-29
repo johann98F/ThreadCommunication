@@ -15,12 +15,13 @@ public class Kitchen implements Runnable
     @Override
     public void run() 
     {
-        while(running)
-        {
-            if(name.contains("Eismaschine"))
+        if(name.contains("Eismaschine"))
             {
                 kill();
             }
+        while(running)
+        {
+            
 
             try 
             {
