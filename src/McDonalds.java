@@ -44,14 +44,14 @@ public class McDonalds
             
             System.out.println("\nWarte auf Nachschub (╯°□°）╯︵ ┻━┻ ["+cr.getName()+"]["+cr.getCounter()+"][WAIT] \n");
 
-            //Wait() bewirtk das ein Thread an dieser Stekle stehen bleibt, die Methode jedoch nicht sperrt/lockt
+            //Wait() bewirtk das ein Thread an dieser Stelle stehen bleibt, die Methode jedoch nicht sperrt/lockt
             wait(); //Lässt die aktuellen Zugreifer (zb Kasse 1 oder 2) warten bis Notify() Eintritt
 
         }
         
         nuggets -= queue;
         queue = 0;
-        System.out.println(" \n-- Bestellung ["+cr.getName()+"]["+cr.getCounter()+"] fertig | Vorrat:("+nuggets+")  --\n");
+        System.out.println(" \n-- Bestellung ["+cr.getName()+"]["+cr.getCounter()+"] fertig | Vorrat:("+nuggets+") [NOTIFIY erhalten] --\n");
         getStaffStatus();
     }
 

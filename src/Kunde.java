@@ -5,8 +5,7 @@ public class Kunde
     CashRegister c;
 
     Kunde(CashRegister c)
-    {
-
+    {}
         Random r = new Random();
 
         try 

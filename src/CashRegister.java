@@ -19,8 +19,6 @@ public class CashRegister implements Runnable
     {
         Random r = new Random();
 
-        
-
         while(running)
         {
             try 
@@ -29,12 +27,10 @@ public class CashRegister implements Runnable
                 new Kunde(this);
             } 
             catch (InterruptedException e){e.printStackTrace();}
-            
         }
         
     }
 
-    
     public void kill()
     {
         System.err.println(name + "funktionert nicht mehr !");
@@ -49,7 +45,7 @@ public class CashRegister implements Runnable
         return counter;
     }
 
-    public synchronized void getOrder(int val) throws InterruptedException
+    public  void getOrder(int val) throws InterruptedException
     {
         counter++;
         System.out.println("\n++ ["+name+"]["+counter+"] Bestellung : " + val + "x ++\n");
